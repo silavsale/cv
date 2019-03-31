@@ -12,10 +12,10 @@ function openInNewTab() {
 }
 //---------- scroll ------------------
 // Get a reference to the <path>
-var path = document.querySelector('#star-path');
+let path = document.querySelector('#star-path');
 
 // Get length of path... ~577px in this case
-var pathLength = path.getTotalLength();
+let pathLength = path.getTotalLength();
 
 // Make very long dashes (the length of the path itself)
 path.style.strokeDasharray = pathLength + ' ' + pathLength;
@@ -33,10 +33,10 @@ window.addEventListener("scroll", function(e) {
     // What % down is it?
     // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript/2387222#2387222
     // Had to try three or four differnet methods here. Kind of a cross-browser nightmare.
-    var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
     // Length to offset the dashes
-    var drawLength = pathLength * scrollPercentage;
+    let drawLength = pathLength * scrollPercentage;
 
     // Draw in reverse
     path.style.strokeDashoffset = pathLength - drawLength;
