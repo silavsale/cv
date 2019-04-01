@@ -10,6 +10,19 @@ function openInNewTab() {
     let win = window.open(url, '_blank');
     win.focus();
 }
+
+function openInNewTab2() {
+    let url = 'https://node-js-chat-app.herokuapp.com/';
+    let win = window.open(url, '_blank');
+    win.focus();
+}
+
+function openInNewTab3() {
+    let url = 'https://sharp-nightingale-c18f72.netlify.com/';
+    let win = window.open(url, '_blank');
+    win.focus();
+}
+
 //---------- scroll ------------------
 // Get a reference to the <path>
 let path = document.querySelector('#star-path');
